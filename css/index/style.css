@@ -76,7 +76,7 @@ main > #recipe_section > #main_section_recipe > #main_div_recipe_description > #
 main > #recipe_section > #main_section_recipe > #main_div_recipe_description > p {
   margin-top: 10px;
 }
-main > #recipe_section > #main_recipe_img > img {
+main > #recipe_section > #main_recipe_section > img {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;

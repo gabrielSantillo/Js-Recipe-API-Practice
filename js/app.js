@@ -1,17 +1,20 @@
 function post_success(response) {
-  let main_div_recipe_description = document.getElementById(`main_div_recipe_description`);
-  main_div_recipe_description.insertAdjacentHTML(
-    `beforeend`,
-    `
-    <h2>${response[`data`][`meals`][0][`strMeal`]}</h2>
-    <p class="gray_text">Category: ${response[`data`][`meals`][0][`strCategory`]}</p>
-    <p class="gray_text">Country of origin: ${response[`data`][`meals`][0][`strArea`]}</p>
-    <p id="description">${response[`data`][`meals`][0][`strInstructions`]}</p>
-`
-  );
+  let recipe_title = document.getElementById(`recipe_title`);
+  let recipe_category = document.getElementById(`recipe_category`);
+  let recipe_country = document.getElementById(`recipe_country`);
+  let recipe_description = document.getElementById(`recipe_description`);
+
+  recipe_title[`innerHTML`] = `${response[`data`][`meals`][0][`strMeal`]}`;
+  recipe_category[`innerHTML`] = `Category: ${
+    response[`data`][`meals`][0][`strCategory`]
+  }`;
+  recipe_country[`innerHTML`] = `Country of origin: ${response[`data`][`meals`][0][`strArea`]}`;
+  recipe_description[`innerHTML`] = `${response[`data`][`meals`][0][`strInstructions`]}`;
+
 
   let main_recipe_img = document.getElementById(`main_recipe_img`);
-  main_recipe_img.insertAdjacentHTML(`beforeend`, `<img src="${response[`data`][`meals`][0][`strMealThumb`]}">`)
+  main_recipe_img.setAttribute(`src`, `${response[`data`][`meals`][0][`strMealThumb`]}`)
+    
 }
 
 function post_failure(error) {
