@@ -36,3 +36,64 @@ header {
         }
     }
 }
+
+main {
+    display: grid;
+    place-items: center;
+
+    >#main_div_button{
+        margin-top: 20px;
+
+        >#random_recipe_button {
+            border: none;
+            background-image: linear-gradient(45deg, #AD8CEA, #50DFB2);
+            border-radius: 5px;
+            width: 150px;
+            height: 40px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        >#random_recipe_button:active {
+            transform: scale(.9);
+        }
+    }
+    
+    >#recipe_section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 50px;
+        
+        >#main_section_recipe {
+            display: grid;
+
+            >#main_div_recipe_description {
+                text-align: center;
+                margin: 30px;
+
+                >.gray_text {
+                    color: rgb(186, 186, 186);
+                }
+
+                >#description {
+                    font-size: .9rem;
+                    line-height: 21px;
+                }
+
+                >p {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        >#main_recipe_img {
+            >img {
+                object-fit: cover;
+                border-radius: 5px;
+            }
+            
+        }
+    }
+}

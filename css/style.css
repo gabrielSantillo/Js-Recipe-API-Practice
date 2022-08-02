@@ -31,4 +31,53 @@ header > #header_links > a {
   margin-right: 20px;
   text-decoration: none;
   color: white;
+}
+
+main {
+  display: grid;
+  place-items: center;
+}
+main > #main_div_button {
+  margin-top: 20px;
+}
+main > #main_div_button > #random_recipe_button {
+  border: none;
+  background-image: linear-gradient(45deg, #AD8CEA, #50DFB2);
+  border-radius: 5px;
+  width: 150px;
+  height: 40px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+main > #main_div_button > #random_recipe_button:active {
+  transform: scale(0.9);
+}
+main > #recipe_section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 50px;
+}
+main > #recipe_section > #main_section_recipe {
+  display: grid;
+}
+main > #recipe_section > #main_section_recipe > #main_div_recipe_description {
+  text-align: center;
+  margin: 30px;
+}
+main > #recipe_section > #main_section_recipe > #main_div_recipe_description > .gray_text {
+  color: rgb(186, 186, 186);
+}
+main > #recipe_section > #main_section_recipe > #main_div_recipe_description > #description {
+  font-size: 0.9rem;
+  line-height: 21px;
+}
+main > #recipe_section > #main_section_recipe > #main_div_recipe_description > p {
+  margin-top: 10px;
+}
+main > #recipe_section > #main_recipe_img > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
 }/*# sourceMappingURL=style.css.map */
