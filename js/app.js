@@ -1,7 +1,8 @@
 function post_success(response) {
-let recipe_section = document.getElementById(`recipe_section`);
-recipe_section.insertAdjacentHTML(`afterbegin`, 
-`
+  let recipe_section = document.getElementById(`recipe_section`);
+  recipe_section.insertAdjacentHTML(
+    `afterbegin`,
+    `
 <article class="recipe_cards">
     <h3>${response[`data`][`meals`][0][`strMeal`]}</h3>
     <img src="${response[`data`][`meals`][0][`strMealThumb`]}">
@@ -9,11 +10,15 @@ recipe_section.insertAdjacentHTML(`afterbegin`,
     <p>${response[`data`][`meals`][0][`strArea`]}</p>
     <p>${response[`data`][`meals`][0][`strInstructions`]}</p>
 </article>
-`)
+`
+  );
 }
 
 function post_failure(error) {
-
+  document.body.insertAdjacentHTML(
+    `beforeend`,
+    `Sorry, click the button again.`
+  );
 }
 
 function randomRecipe(details) {
