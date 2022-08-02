@@ -40,6 +40,7 @@ header {
 main {
     display: grid;
     place-items: center;
+    height: 50%;
 
     >#main_div_button{
         margin-top: 20px;
@@ -71,7 +72,7 @@ main {
 
             >#main_div_recipe_description {
                 text-align: center;
-                margin: 30px;
+                margin: 60px;
 
                 >.gray_text {
                     color: rgb(186, 186, 186);
@@ -88,12 +89,28 @@ main {
             }
         }
 
-        >#main_recipe_section {
-            >img {
-                object-fit: cover;
-                border-radius: 5px;
+        
+        >img {
+            object-fit: cover;
+            border-radius: 5px;
+            width: 100%;
+            height: 60%;
             }
-            
-        }
     }
+
+    h1 {
+        margin-bottom: 50px;
+        transform: translateY(-130%);
+    }
+}
+
+footer {
+    background: #50DFB2;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    bottom: 0;
+    display: grid;
+    place-items: center;
+    color: white;
 }

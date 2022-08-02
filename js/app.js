@@ -13,7 +13,7 @@ function post_success(response) {
 
 
   let main_recipe_img = document.getElementById(`main_recipe_img`);
-  main_recipe_img.setAttribute(`src`, `${response[`data`][`meals`][0][`strMealThumb`]}`)
+  main_recipe_img[`outerHTML`] =  `<img id="main_recipe_img" src="${response[`data`][`meals`][0][`strMealThumb`]}">`;
     
 }
 
