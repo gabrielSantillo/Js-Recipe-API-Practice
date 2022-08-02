@@ -1,21 +1,23 @@
 function post_success(response) {
-  let found_recipe = document.getElementById(`found_recipe`);
-  for (let i = 0; i < response[`data`][`meals`].length; i++) {
-    found_recipe.insertAdjacentHTML(
-      `beforeend`,
-      `
-   <div id="recipe_cards">
-        <h2>${response[`data`][`meals`][i][`strMeal`]}</h2>
-        <p>${response[`data`][`meals`][i][`strCategory`]}</p>
-        <img src="${response[`data`][`meals`][i][`strMealThumb`]}">
-        <p>${response[`data`][`meals`][i][`strInstructions`]}</p>
-   </div>
-   `
-    );
+    let found_recipe = document.getElementById(`found_recipe`);
+    for (let i = 0; i < response[`data`][`meals`].length; i++) {
+      found_recipe.insertAdjacentHTML(
+        `beforeend`,
+        `
+     <div class="recipe_cards">
+          <h2>${response[`data`][`meals`][i][`strMeal`]}</h2>
+          <p id="category_recipe">${response[`data`][`meals`][i][`strCategory`]}</p>
+          <img src="${response[`data`][`meals`][i][`strMealThumb`]}">
+          <p id="description_recipe">${response[`data`][`meals`][i][`strInstructions`]}</p>
+     </div>
+     `
+      );
+    }
   }
-}
 
-function post_failure(error) {}
+function post_failure(error) {
+    alert(`Sorry, we didn't find your recipe research.`)
+}
 
 function showCategories(details) {
   let input_search = document.querySelector(`input`);
