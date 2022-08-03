@@ -40,13 +40,13 @@ main {
   row-gap: 25px;
   margin: 25px 0;
 }
-main > section {
+main > #categories_button_section_one {
   display: grid;
   grid-auto-flow: column;
   -moz-column-gap: 20px;
        column-gap: 20px;
 }
-main > section > button {
+main > #categories_button_section_one > button {
   border: none;
   background: #50DFB2;
   border-radius: 5px;
@@ -58,8 +58,54 @@ main > section > button {
   font-size: 1.1rem;
   justify-self: center;
 }
-main > section > button:active {
+main > #categories_button_section_one > button:active {
   transform: scale(0.9);
+}
+main > #categories_button_section_two {
+  display: grid;
+  grid-auto-flow: column;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+main > #categories_button_section_two > button {
+  border: none;
+  background: #50DFB2;
+  border-radius: 5px;
+  width: 125px;
+  height: 35px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+  justify-self: center;
+}
+main > #categories_button_section_two > button:active {
+  transform: scale(0.9);
+}
+main > #chosen_category {
+  margin: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+  row-gap: 20px;
+  place-items: center;
+}
+main > #chosen_category > div {
+  display: grid;
+  row-gap: 5px;
+  width: 100%;
+  box-shadow: 8px 8px 16px rgb(235, 235, 235);
+}
+main > #chosen_category > div > a {
+  color: black;
+  justify-self: center;
+  text-align: center;
+}
+main > #chosen_category > div > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
 }
 
 footer {
