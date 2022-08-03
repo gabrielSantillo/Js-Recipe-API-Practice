@@ -99,7 +99,7 @@ main {
         row-gap: 20px;
         place-items: center;
 
-        >div {
+        >.recipes_card {
             display: grid;
             row-gap: 5px;
             width: 100%;
@@ -115,8 +115,29 @@ main {
                 border-radius: 5px;
             }
         }
+
+        >#chosen_recipe {
+            display: grid;
+            row-gap: 5px;
+            width: 60%;
+            box-shadow: 8px 8px 16px rgb(241, 241, 241);
+            text-align: center;
+            place-items: center;
+            row-gap: 10px;
+            border-radius: 20px;
+
+            >img {
+                width: 400px;
+                object-fit: cover;
+                margin-bottom: 30px;
+                border-radius: 5px;
+            }
+
+            >p {
+                margin: 0 10% 20px;
+            }
+        }
     }
-    
 }
 
 footer {

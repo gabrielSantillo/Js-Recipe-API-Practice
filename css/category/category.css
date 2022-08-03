@@ -91,21 +91,41 @@ main > #chosen_category {
   row-gap: 20px;
   place-items: center;
 }
-main > #chosen_category > div {
+main > #chosen_category > .recipes_card {
   display: grid;
   row-gap: 5px;
   width: 100%;
   box-shadow: 8px 8px 16px rgb(235, 235, 235);
 }
-main > #chosen_category > div > a {
+main > #chosen_category > .recipes_card > a {
   color: black;
   justify-self: center;
   text-align: center;
 }
-main > #chosen_category > div > img {
+main > #chosen_category > .recipes_card > img {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
+}
+main > #chosen_category > #chosen_recipe {
+  display: grid;
+  row-gap: 5px;
+  width: 60%;
+  box-shadow: 8px 8px 16px rgb(241, 241, 241);
+  text-align: center;
+  place-items: center;
+  row-gap: 10px;
+  border-radius: 20px;
+}
+main > #chosen_category > #chosen_recipe > img {
+  width: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+main > #chosen_category > #chosen_recipe > p {
+  margin: 0 10% 20px;
 }
 
 footer {
