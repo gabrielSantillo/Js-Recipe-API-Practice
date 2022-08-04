@@ -7,6 +7,8 @@ function post_failure(error) {
 }
 
 function showOptions(details) {
+  let input = document.querySelector(`input`);
+  let input_value = input[`value`];
   axios
     .request({
       url: ` https://www.themealdb.com/api/json/v1/1/filter.php?c=${input_value}`,
@@ -14,9 +16,6 @@ function showOptions(details) {
     .then(post_success)
     .catch(post_failure);
 }
-
-let input = document.querySelector(`input`);
-let input_value = input[`value`];
 
 let search_button = document.getElementById(`search_button`);
 search_button.addEventListener(`click`, showOptions);
