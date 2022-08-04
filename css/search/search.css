@@ -17,20 +17,26 @@ img, svg, iframe {
 header {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: #AD8CEA;
   height: 8vh;
   width: 100%;
   place-items: center;
+  color: black;
+  font-weight: bold;
 }
 header > #header_logo {
   justify-self: start;
   margin-left: 10%;
-  color: white;
+}
+header > #header_logo > h3 > a {
+  color: #11b481;
 }
 header > #header_links > a {
   margin-right: 20px;
   text-decoration: none;
-  color: white;
+  color: black;
+}
+header > #header_links > a:hover {
+  color: #11b481;
 }
 
 main {
@@ -56,7 +62,7 @@ main > #search_section > input:focus, main > #search_section input:valid {
 }
 main > #search_section > button {
   border: none;
-  background-image: linear-gradient(45deg, #AD8CEA, #50DFB2);
+  background-color: #11b481;
   border-radius: 5px;
   width: 150px;
   height: 40px;
@@ -92,16 +98,4 @@ main > #search_section > button:active {
 #found_recipe .recipe_cards > #category_recipe {
   color: rgb(186, 186, 186);
   transform: translateY(-15px);
-}
-
-footer {
-  background: #50DFB2;
-  width: 100%;
-  height: 50px;
-  position: relative;
-  bottom: 0;
-  display: grid;
-  place-items: center;
-  color: white;
-  margin-top: 50px;
 }/*# sourceMappingURL=search.css.map */
