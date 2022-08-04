@@ -31,24 +31,33 @@
           </div>
 
           <div id="main_div_button">
-            <button id="random_recipe_button">Random Recipe</button>
+            <button id="random_recipe_button">Get Started</button>
           </div>
         </div>
 
-        <div id="main_recipe_img">
-          <img src="https://images.pexels.com/photos/13064584/pexels-photo-13064584.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-        </div>
+        <img
+          id="img_first_section"
+          src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
       </section>
 
+      <section id="recipe_section">
+        <div id="main_recipe_img"></div>
+        <div>
+          <div id="card_recipe">
             <h2 id="recipe_title"></h2>
-            <p id="recipe_category" class="gray_text"></p>
-            <p id="recipe_country" class="gray_text"></p>
-            <p id="recipe_description"></p>
+            <div>
+              <p id="recipe_category" class="gray_text"></p>
+              <p id="recipe_country" class="gray_text"></p>
+            </div>
+          </div>
 
+          <p id="recipe_description"></p>
+        </div>
+      </section>
     </main>
-    <footer>
-      <h4>All rights reserved</h4>
-    </footer>
+    <footer></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>

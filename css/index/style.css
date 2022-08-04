@@ -55,7 +55,6 @@ main > #first_section > #content_div {
 main > #first_section > #content_div > #p_tag_div {
   color: rgb(148, 148, 148);
   display: grid;
-  row-gap: 7.5px;
 }
 main > #first_section > #content_div > h1 {
   font-size: 3.5rem;
@@ -77,24 +76,42 @@ main > #first_section > #content_div > #main_div_button > #random_recipe_button:
 main > #first_section > #content_div > #main_div_button > #random_recipe_button:active {
   transform: scale(0.9);
 }
-
-#main_recipe_img {
-  display: grid;
-  place-items: center;
-}
-#main_recipe_img > img {
-  width: 100%;
-  height: 100%;
+main > h1 {
+  justify-self: center;
+  margin-top: 20px;
 }
 
-footer {
-  background: #11b481;
-  width: 100%;
-  height: 50px;
-  position: relative;
-  bottom: 0;
+#img_first_section {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+#recipe_section {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 10%;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  margin-bottom: 20px;
+}
+#recipe_section > #main_recipe_img {
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 80%;
+}
+#recipe_section > div > div {
+  margin-top: 25px;
+  margin-bottom: 50px;
+  width: 50%;
+  height: 20%;
+  display: grid;
+  text-align: center;
+  padding: 5px;
   place-items: center;
+  border-radius: 5px;
+  z-index: 2;
+  transform: translateX(-30%);
   color: white;
-  margin-top: 50px;
 }/*# sourceMappingURL=style.css.map */

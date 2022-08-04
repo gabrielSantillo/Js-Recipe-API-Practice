@@ -14,10 +14,12 @@ function post_success(response) {
 
   let main_recipe_img = document.getElementById(`main_recipe_img`);
   main_recipe_img[`outerHTML`] =  `
-  <div id="main_recipe_img">
-  <img src="${response[`data`][`meals`][0][`strMealThumb`]}">
-  </div>`;
+  <img id="main_recipe_img" src="${response[`data`][`meals`][0][`strMealThumb`]}">
+  `;
     
+
+  let card_recipe = document.getElementById(`card_recipe`);
+  card_recipe[`style`][`backgroundColor`] = `#11b481`;
 }
 
 function post_failure(error) {
